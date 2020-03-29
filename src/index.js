@@ -4,13 +4,13 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { logger } from 'redux-logger';
-import reducer from './reducers';
+import moviesReducer from './reducers/moviesReducer';
 import './index.css';
 import App from './App';
 // import * as serviceWorker from './serviceWorker';
 
 const store = createStore(
-    reducer,
+    moviesReducer,
     applyMiddleware(thunk, logger)
 )
 ReactDOM.render(

@@ -13,8 +13,9 @@ class App extends Component {
       <Router>
         <NavBar />
         <Switch>
-          <Route path="/movies/list" exact component={MoviesList} />
-          <Route path="/movies/create" exact component={MoviesInsert} />
+        {/* <Route path="/" exact component={MoviesList} /> */}
+          <Route path="/movies/list" component={MoviesList} />
+          <Route path="/movies/create" component={MoviesInsert} />
           <Route
               path="/movies/update/:id"
               exact
